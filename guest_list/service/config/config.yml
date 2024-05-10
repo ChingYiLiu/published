@@ -1,0 +1,3 @@
+if_go_flow:
+  if_read_db: yes
+  if_write_db: yes
