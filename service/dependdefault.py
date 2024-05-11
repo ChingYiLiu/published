@@ -22,7 +22,7 @@ def get_myconfig(_myconfig_file):
     return _myconfig
 
 myconfig = get_myconfig("service/config/config.yml")
-db_site = "db_data/guest_list.db"
+db_site = "service/db_data/guest_list.db"
 
 #%% DB related
 import pandas as pd
