@@ -31,5 +31,5 @@ EXPOSE 8080
 COPY ./service /service
 RUN ls -l service/config/config.yml
 
-CMD ["uvicorn", "service.main:app", "--host", "0.0.0.0", "--port", "8080", "--log-config", "service/config/log_conf.yml"]
+CMD ["uvicorn", "service.main:app", "--log-config", "service/config/log_conf.yml"]
 # uvicorn service.main:app --host 0.0.0.0 --port 8080 --log-config service/config/log_conf.yml
