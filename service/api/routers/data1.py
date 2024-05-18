@@ -24,11 +24,12 @@ async def get_by_name(name:str, request:Request):
 
     if len(df_db) > 1:
         name_getted = df_db.name.tolist()
-        name_getted = "、".join(name_getted)
+        name_getted = "」、「".join(name_getted)
+        name_getted = '「' + name_getted + '」'
         return f'唉呀，有點模糊的稱呼呢... 請問您是 {name_getted} 其中的哪一位呢？'
     elif len(df_db) == 1:
         name_getted = df_db.name.values[0]
         attend_info = df_db.attend_info.values[0]
         return f'親愛的{name_getted}，已幫您登記「{attend_info}」。'
     else:
-        return '再試試看、或者請儘快聯繫 萬生/璟儀 確認唷！' 
+        return '找不到資訊耶... 請儘快聯繫 萬生/璟儀 確認出席資訊唷！' 
