@@ -12,6 +12,9 @@ async def get_by_name(name:str, request:Request):
     request_id = request.state.request_id
     name = name.lower()
 
+    if name is None or name == '':
+        return '請輸入中文姓名唷！'
+
     if '萬生' in name and len(name) <= 3:
         return '你是新郎吧！？裝什麼賓客 >_^'
 
